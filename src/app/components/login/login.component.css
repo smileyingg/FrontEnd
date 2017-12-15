@@ -1,0 +1,10 @@
+form {
+    margin: auto;
+    width: 60%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-block-start: 100px;
+    
+}

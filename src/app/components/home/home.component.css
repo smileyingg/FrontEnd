@@ -1,5 +1,14 @@
-div.img-resize img {
-    padding-right: 20 px; 
-    width: 30 px;
-    height: 30px;
+h5{
+    padding-top: 50px;
+    text-align: center;
+}
+#carouselExampleIndicators{
+    padding-top: 50px;
+}
+.blockquote {
+    margin: 10px;
+    
+}
+.full-home{
+    background-color: #ffff;
 }
