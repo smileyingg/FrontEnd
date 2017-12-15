@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Music } from "../../Models/music.model"
+import { MusicService } from '../../services/music.service'
+import { Router } from '@angular/router'
 @Component({
   selector: 'app-korea',
   templateUrl: './korea.component.html',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KoreaComponent implements OnInit {
 
-  constructor() { }
+  private list : Music[]
+
+  constructor(private router:Router, private musicService:MusicService) { }
 
   ngOnInit() {
+    this.musicService.getMusic().subscribe((response) => {this.list = response
+    })
   }
 
 }

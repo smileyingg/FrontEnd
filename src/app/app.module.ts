@@ -10,10 +10,11 @@ import { LoginComponent } from './components/login/login.component';
 import { AppRoutingModule } from './app-route.module';
 import { KoreaComponent } from './components/korea/korea.component';
 import { InterComponent } from './components/inter/inter.component'
-
+import { LoginService } from './services/login.service' 
+import { MusicService } from './services/music.service'
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
-  
   declarations: [
     AppComponent,
     HomeComponent,
@@ -22,16 +23,19 @@ import { InterComponent } from './components/inter/inter.component'
     KoreaComponent,
     InterComponent,
     
-    
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([]),
     HttpModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    LoginService,
+    MusicService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
